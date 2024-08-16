@@ -1,0 +1,17 @@
+.nav {
+  display: flex;
+  color: var(--white);
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.navList {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.navList li {
+  cursor: pointer;
+  font-size: var(--font-medium);
+}

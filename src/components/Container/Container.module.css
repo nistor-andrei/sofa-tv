@@ -1,0 +1,10 @@
+.container {
+  max-width: 1640px;
+  width: 87.5%;
+  margin: auto;
+  position: relative;
+  z-index: 3;
+  color: white;
+  padding: 20px;
+  height: 100%;
+}
