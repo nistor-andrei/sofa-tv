@@ -1,0 +1,13 @@
+.button {
+  display: flex;
+  background-color: var(--yellow);
+  color: var(--white);
+  border: 0;
+  font-family: inherit;
+  align-self: flex-start;
+  padding: 0.75rem 2.1rem;
+  border-radius: 20px;
+  font-size: var(--font-xsmall);
+  margin-top: 0.75rem;
+  cursor: pointer;
+}

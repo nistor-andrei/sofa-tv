@@ -1,0 +1,44 @@
+.movieCard {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  width: 180px;
+  padding: 10px;
+  position: relative;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 10px;
+}
+
+.imageContainer {
+  position: relative;
+}
+
+.movieImage {
+  object-fit: cover;
+}
+
+.ratingBadge {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background-color: #333;
+  color: #fff;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.movieDetails {
+  text-align: center;
+  margin-top: 8px;
+}
+
+.movieTitle {
+  font-size: 14px;
+  margin: 0;
+}
+
+.movieYear {
+  font-size: 12px;
+  color: #999;
+}

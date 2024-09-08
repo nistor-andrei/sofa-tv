@@ -6,29 +6,40 @@ import { TRENDING_MOVIE_URL } from "global/enums/enums";
 import { Suspense } from "react";
 import useSWR from "swr";
 import Hero from "./components/Hero/Hero";
-import Loader from "components/Loader/Loader";
+import MostPopular from "./components/MostPopular/MostPopular";
+import { ITrendingMovieRecord } from "global/types/types";
+import styles from "./page.module.css";
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const Home = () => {
-  const { data } = useSWR<ITrendingMovieRecord>(TRENDING_MOVIE_URL, fetcher, {
-    revalidateOnFocus: false,
-  });
-  const randomMovie = data?.results[Math.floor(Math.random() * 20)];
+  const { data, error } = useSWR<ITrendingMovieRecord>(
+    TRENDING_MOVIE_URL,
+    fetcher,
+    {
+      revalidateOnFocus: false,
+    }
+  );
 
-  if (!randomMovie) {
-    return <div>Loading...</div>;
-  }
+  const randomNumber = Math.floor(Math.random() * 20);
+  const randomMovie = data?.results[randomNumber];
 
   return (
     <Suspense fallback={<h1>Loading...</h1>}>
-      <Container>
+      <Navbar />
+      {data && randomMovie && (
         <>
-          <Navbar />
-          <Hero movieDetails={randomMovie} />
+          <div className={styles.container}>
+            <Backdrop image={randomMovie?.backdrop_path ?? ""} />
+            <Container>
+              <>
+                <Hero movieDetails={randomMovie} />
+              </>
+            </Container>
+          </div>
+          <MostPopular movies={data.results} />
         </>
-      </Container>
-      <Backdrop image={randomMovie?.backdrop_path ?? ""} />
+      )}
     </Suspense>
   );
 };

@@ -1,11 +1,11 @@
-interface ITrendingMovieRecord {
+export interface ITrendingMovieRecord {
   page: number;
   results: ITrendingMovie[];
   total_pages: number;
   total_results: number;
 }
 
-interface ITrendingMovie {
+export interface ITrendingMovie {
   adult: boolean;
   backdrop_path: string;
   genre_ids: Number[];
@@ -21,4 +21,11 @@ interface ITrendingMovie {
   video: boolean;
   vote_average: number;
   vote_count: number;
+}
+
+export interface MovieCardProps {
+  rating: string;
+  imageUrl: string;
+  name: string;
+  year: string;
 }
