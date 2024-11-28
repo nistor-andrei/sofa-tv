@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
-import "./globals.css";
+import "global/style/globals.css";
 import Home from "./page";
 import { Suspense } from "react";
 

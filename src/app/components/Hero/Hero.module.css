@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  justify-content: center;
+}
+
+.title {
+  font-size: var(--font-large);
+}
+
+.details {
+  display: flex;
+  gap: 10px;
+  margin: 0.25rem 0;
+}
+
+.details_sub {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: var(--font-small);
+}
+
+.year {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.overview {
+  margin: 0.25rem 0;
+  max-width: 500px;
+  word-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}

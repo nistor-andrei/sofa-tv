@@ -1,8 +1,14 @@
 .nav {
   display: flex;
   color: var(--white);
-  margin-top: 1rem;
+  padding-top: 1rem;
   align-items: center;
+  background-color: transparent;
+  z-index: 1;
+  position: relative;
+  max-width: 1640px;
+  width: 87.5%;
+  margin: auto;
 }
 
 .navList {
