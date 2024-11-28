@@ -21,6 +21,7 @@ export interface ITrendingMovie {
   video: boolean;
   vote_average: number;
   vote_count: number;
+  first_air_date?: string;
 }
 
 export interface MovieCardProps {
@@ -28,4 +29,5 @@ export interface MovieCardProps {
   imageUrl: string;
   name: string;
   year: string;
+  isLoading: boolean;
 }
